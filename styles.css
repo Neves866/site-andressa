@@ -99,13 +99,10 @@ a {
 .profile__image {
   width: 100%;
   height: 100%;
-
   aspect-ratio: 1 / 1;
-
   border-radius: 50%;
-
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .eyebrow {
@@ -381,14 +378,11 @@ h2 {
 
 .about__image {
   display: block;
-
   width: 100%;
   height: 100%;
   min-height: 0;
-
   object-fit: cover;
   object-position: center top;
-
   transition: transform 500ms ease;
 }
 
@@ -463,4 +457,217 @@ h2 {
   *::after {
     transition-duration: 0.01ms !important;
   }
+}
+/* ========================================
+   PALETA FINAL — ANDRESSA DE SOUZA
+======================================== */
+
+:root {
+  --background: #f8f0ec;
+  --surface: #fffaf7;
+  --surface-dark: #173f34;
+
+  --text: #2d2320;
+  --text-soft: #71615d;
+
+  --accent: #b45f75;
+  --accent-dark: #813e52;
+
+  --green: #1d6b55;
+  --green-dark: #164b3e;
+
+  --gold: #d2aa75;
+
+  --border: rgba(91, 63, 56, 0.14);
+}
+
+/* Fundo com pontos suaves de cor */
+body {
+  background:
+    radial-gradient(
+      circle at 12% 7%,
+      rgba(180, 95, 117, 0.2),
+      transparent 27rem
+    ),
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(29, 107, 85, 0.16),
+      transparent 30rem
+    ),
+    linear-gradient(
+      180deg,
+      #f7ede9 0%,
+      #fffaf7 48%,
+      #f3e6e3 100%
+    );
+}
+
+/* Moldura da foto principal */
+.profile__image-wrapper {
+  border: 2px solid rgba(210, 170, 117, 0.78);
+
+  background:
+    linear-gradient(
+      145deg,
+      #d8b27c,
+      #b45f75
+    );
+
+  box-shadow:
+    0 22px 55px rgba(69, 42, 37, 0.18),
+    0 0 0 9px rgba(255, 250, 247, 0.76);
+}
+
+.profile__image-wrapper::after {
+  border-color: rgba(255, 244, 224, 0.82);
+}
+
+/* Área de atuação */
+.eyebrow {
+  color: var(--green);
+}
+
+/* Nome */
+h1,
+h2 {
+  color: var(--text);
+}
+
+/* Frase principal */
+.profile__description {
+  color: #815968;
+}
+
+/* Primeiro card */
+.link-card--featured {
+  border-color: rgba(210, 170, 117, 0.35);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green-dark) 0%,
+      var(--green) 100%
+    );
+
+  box-shadow:
+    0 16px 38px rgba(22, 75, 62, 0.24);
+}
+
+.link-card--featured small {
+  color: #e5c99f;
+}
+
+/* Cards comuns */
+.link-card {
+  border-color: rgba(129, 62, 82, 0.14);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(250, 231, 235, 0.92),
+      rgba(255, 250, 247, 0.98)
+    );
+}
+
+/* WhatsApp com tom esverdeado */
+.links .link-card:nth-child(2) {
+  border-color: rgba(29, 107, 85, 0.16);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(218, 237, 229, 0.96),
+      rgba(255, 250, 247, 0.98)
+    );
+}
+
+/* Marketing com rosa mais presente */
+.links .link-card:nth-child(3) {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(239, 205, 214, 0.92),
+      rgba(255, 247, 245, 0.98)
+    );
+}
+
+/* Experiência do cliente */
+.links .link-card:nth-child(4) {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(221, 235, 228, 0.94),
+      rgba(255, 249, 246, 0.98)
+    );
+}
+
+/* Instagram */
+.links .link-card:last-child {
+  border-color: rgba(180, 95, 117, 0.22);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(232, 193, 205, 0.92),
+      rgba(251, 231, 220, 0.96)
+    );
+}
+
+/* Círculo das setas */
+.link-card__arrow {
+  background: rgba(180, 95, 117, 0.13);
+  color: var(--accent-dark);
+}
+
+/* Hover dos cards */
+.link-card:hover {
+  border-color: rgba(180, 95, 117, 0.38);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(245, 216, 224, 1),
+      rgba(255, 250, 247, 1)
+    );
+
+  box-shadow:
+    0 16px 35px rgba(80, 51, 46, 0.13);
+}
+
+.link-card--featured:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #133f34,
+      #278066
+    );
+}
+
+/* Seção sobre */
+.about {
+  border-color: rgba(180, 95, 117, 0.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 250, 247, 0.98),
+      rgba(242, 213, 220, 0.73)
+    );
+
+  box-shadow:
+    0 24px 58px rgba(85, 51, 46, 0.13);
+}
+
+.about::before {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(29, 107, 85, 0.18),
+      rgba(210, 170, 117, 0.13)
+    );
+}
+
+/* Rodapé */
+.footer a {
+  color: var(--green);
 }
