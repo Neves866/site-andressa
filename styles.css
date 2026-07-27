@@ -459,215 +459,252 @@ h2 {
   }
 }
 /* ========================================
-   PALETA FINAL — ANDRESSA DE SOUZA
+   IDENTIDADE VISUAL FINAL — ANDRESSA
 ======================================== */
 
 :root {
-  --background: #f8f0ec;
-  --surface: #fffaf7;
-  --surface-dark: #173f34;
+  --background-dark: #291720;
+  --background-medium: #522b3a;
 
-  --text: #2d2320;
-  --text-soft: #71615d;
+  --surface: #fff8f3;
+  --surface-soft: #f6e9e7;
 
-  --accent: #b45f75;
-  --accent-dark: #813e52;
+  --text: #291f21;
+  --text-soft: #716164;
 
-  --green: #1d6b55;
-  --green-dark: #164b3e;
+  --rose: #b96e7d;
+  --rose-dark: #824454;
 
-  --gold: #d2aa75;
+  --gold: #d5ae7b;
+  --green: #245c4c;
 
-  --border: rgba(91, 63, 56, 0.14);
+  --border: rgba(130, 68, 84, 0.2);
 }
 
-/* Fundo com pontos suaves de cor */
+/* FUNDO PRINCIPAL */
+
 body {
   background:
     radial-gradient(
-      circle at 12% 7%,
-      rgba(180, 95, 117, 0.2),
-      transparent 27rem
-    ),
-    radial-gradient(
-      circle at 88% 20%,
-      rgba(29, 107, 85, 0.16),
+      circle at 85% 10%,
+      rgba(36, 92, 76, 0.32),
       transparent 30rem
     ),
+    radial-gradient(
+      circle at 10% 30%,
+      rgba(185, 110, 125, 0.28),
+      transparent 27rem
+    ),
     linear-gradient(
-      180deg,
-      #f7ede9 0%,
-      #fffaf7 48%,
-      #f3e6e3 100%
+      160deg,
+      var(--background-dark) 0%,
+      var(--background-medium) 52%,
+      #321b25 100%
     );
+
+  background-attachment: fixed;
 }
 
-/* Moldura da foto principal */
+/* FOTO PRINCIPAL */
+
 .profile__image-wrapper {
-  border: 2px solid rgba(210, 170, 117, 0.78);
+  border: 2px solid var(--gold);
 
   background:
     linear-gradient(
       145deg,
-      #d8b27c,
-      #b45f75
+      var(--gold),
+      var(--rose)
     );
 
   box-shadow:
-    0 22px 55px rgba(69, 42, 37, 0.18),
-    0 0 0 9px rgba(255, 250, 247, 0.76);
+    0 24px 58px rgba(0, 0, 0, 0.32),
+    0 0 0 9px rgba(255, 248, 243, 0.14);
 }
 
 .profile__image-wrapper::after {
-  border-color: rgba(255, 244, 224, 0.82);
+  border-color: rgba(255, 238, 215, 0.76);
 }
 
-/* Área de atuação */
-.eyebrow {
-  color: var(--green);
+/* APRESENTAÇÃO */
+
+.profile .eyebrow {
+  color: #e9bdc7;
 }
 
-/* Nome */
-h1,
-h2 {
+.profile h1 {
+  color: #fffaf7;
+
+  text-shadow:
+    0 5px 24px rgba(0, 0, 0, 0.22);
+}
+
+.profile__description {
+  color: #ead8dd;
+}
+
+/* ÁREA DOS LINKS */
+
+.links {
+  margin-top: 8px;
+}
+
+/* TODOS OS BOTÕES COM A MESMA BASE */
+
+.link-card {
+  min-height: 74px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 248, 243, 0.98),
+      rgba(246, 233, 231, 0.96)
+    );
+
+  color: var(--text);
+
+  box-shadow:
+    0 13px 32px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(10px);
+}
+
+/* Remove as cores diferentes dos botões */
+
+.links .link-card:nth-child(2),
+.links .link-card:nth-child(3),
+.links .link-card:nth-child(4),
+.links .link-card:nth-child(5),
+.links .link-card:last-child {
+  border-color: rgba(255, 255, 255, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 248, 243, 0.98),
+      rgba(246, 233, 231, 0.96)
+    );
+
   color: var(--text);
 }
 
-/* Frase principal */
-.profile__description {
-  color: #815968;
-}
+/* BOTÃO PRINCIPAL */
 
-/* Primeiro card */
 .link-card--featured {
-  border-color: rgba(210, 170, 117, 0.35);
+  min-height: 84px;
+
+  border-color: rgba(255, 222, 227, 0.34);
 
   background:
     linear-gradient(
       135deg,
-      var(--green-dark) 0%,
-      var(--green) 100%
+      var(--rose-dark) 0%,
+      var(--rose) 100%
     );
 
+  color: #ffffff;
+
   box-shadow:
-    0 16px 38px rgba(22, 75, 62, 0.24);
+    0 18px 40px rgba(36, 14, 23, 0.36);
 }
 
 .link-card--featured small {
-  color: #e5c99f;
+  color: #f4d5dc;
 }
 
-/* Cards comuns */
-.link-card {
-  border-color: rgba(129, 62, 82, 0.14);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(250, 231, 235, 0.92),
-      rgba(255, 250, 247, 0.98)
-    );
+.link-card--featured span {
+  color: inherit;
 }
 
-/* WhatsApp com tom esverdeado */
-.links .link-card:nth-child(2) {
-  border-color: rgba(29, 107, 85, 0.16);
+/* SETAS */
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(218, 237, 229, 0.96),
-      rgba(255, 250, 247, 0.98)
-    );
-}
-
-/* Marketing com rosa mais presente */
-.links .link-card:nth-child(3) {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(239, 205, 214, 0.92),
-      rgba(255, 247, 245, 0.98)
-    );
-}
-
-/* Experiência do cliente */
-.links .link-card:nth-child(4) {
-  background:
-    linear-gradient(
-      135deg,
-      rgba(221, 235, 228, 0.94),
-      rgba(255, 249, 246, 0.98)
-    );
-}
-
-/* Instagram */
-.links .link-card:last-child {
-  border-color: rgba(180, 95, 117, 0.22);
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(232, 193, 205, 0.92),
-      rgba(251, 231, 220, 0.96)
-    );
-}
-
-/* Círculo das setas */
 .link-card__arrow {
-  background: rgba(180, 95, 117, 0.13);
-  color: var(--accent-dark);
+  background: rgba(130, 68, 84, 0.12);
+  color: var(--rose-dark);
 }
 
-/* Hover dos cards */
+.link-card--featured .link-card__arrow {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+/* EFEITOS */
+
 .link-card:hover {
-  border-color: rgba(180, 95, 117, 0.38);
+  transform: translateY(-3px);
+
+  border-color: rgba(213, 174, 123, 0.65);
 
   background:
     linear-gradient(
       135deg,
-      rgba(245, 216, 224, 1),
-      rgba(255, 250, 247, 1)
+      #ffffff,
+      #f6e4e4
     );
 
   box-shadow:
-    0 16px 35px rgba(80, 51, 46, 0.13);
+    0 18px 38px rgba(0, 0, 0, 0.25);
 }
 
 .link-card--featured:hover {
   background:
     linear-gradient(
       135deg,
-      #133f34,
-      #278066
+      #743848,
+      #c57b89
     );
 }
 
-/* Seção sobre */
+/* SEÇÃO SOBRE */
+
 .about {
-  border-color: rgba(180, 95, 117, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 250, 247, 0.98),
-      rgba(242, 213, 220, 0.73)
+      rgba(255, 248, 243, 0.98),
+      rgba(244, 225, 226, 0.97)
     );
 
   box-shadow:
-    0 24px 58px rgba(85, 51, 46, 0.13);
+    0 26px 60px rgba(0, 0, 0, 0.28);
 }
 
 .about::before {
   background:
     linear-gradient(
       145deg,
-      rgba(29, 107, 85, 0.18),
-      rgba(210, 170, 117, 0.13)
+      rgba(185, 110, 125, 0.2),
+      rgba(213, 174, 123, 0.17)
     );
 }
 
-/* Rodapé */
+.about .eyebrow {
+  color: var(--rose-dark);
+}
+
+.about h2 {
+  color: var(--text);
+}
+
+.about__content p:not(.eyebrow) {
+  color: var(--text-soft);
+}
+
+/* RODAPÉ */
+
+.footer {
+  border-top-color: rgba(255, 255, 255, 0.2);
+  color: #d8c5ca;
+}
+
+.footer > p:first-child {
+  color: #fffaf7;
+}
+
 .footer a {
-  color: var(--green);
+  color: #f0bec9;
 }
